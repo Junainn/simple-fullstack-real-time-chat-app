@@ -67,6 +67,7 @@ npm install
 
 ```sh
 cd frontend
+cd fr
 npm install
 ```
 
