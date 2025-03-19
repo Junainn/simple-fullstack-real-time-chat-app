@@ -1,3 +1,4 @@
+
 # Real-Time Chat App with Photo Upload
 
 A simple real-time chat application with photo upload functionality using Cloudinary. This project was built for learning **Socket.io** and includes both frontend and backend implementations.
@@ -9,6 +10,8 @@ A simple real-time chat application with photo upload functionality using Cloudi
 - **React.js**
 - **Tailwind CSS**
 - **DaisyUI**
+- **Zustand** (state management)
+- **Axios** (HTTP requests)
 
 ### Backend:
 
@@ -35,8 +38,8 @@ cd your-repo-name
 Rename the environment files:
 
 ```sh
-mv .env.sample .env.development.local
-mv .env.sample .env.production.local
+mv .env.development.local.sample .env.development.local
+mv .env.production.local.sample .env.production.local
 ```
 
 Then, update the `.env.development.local` and `.env.production.local` files with your **MongoDB**, **Cloudinary**, and other necessary configurations.
@@ -46,10 +49,10 @@ Then, update the `.env.development.local` and `.env.production.local` files with
 Rename the environment file:
 
 ```sh
-mv .env.sample .env.local
+mv .env.sample .env
 ```
 
-Update `.env.local` with the required credentials.
+Update `.env` with the required credentials for your frontend configuration.
 
 ### 3️⃣ Install Dependencies
 
@@ -64,8 +67,13 @@ npm install
 
 ```sh
 cd frontend
-cd fr
 npm install
+```
+
+To install **Zustand** and **Axios**, run:
+
+```sh
+npm install zustand axios
 ```
 
 ### 4️⃣ Start the Application
@@ -77,16 +85,16 @@ npm run dev
 ```
 
 > **Note:** If your backend entry file is inside the `src` folder, ensure your `package.json` scripts are correctly set up:
->
+
 > ```json
 > "scripts": {
 >   "start": "node src/server.js",
 >   "dev": "nodemon src/server.js"
 > }
 > ```
->
+
 > If `npm run dev` doesn't work, try running the backend manually:
->
+
 > ```sh
 > node src/server.js
 > ```
@@ -103,6 +111,8 @@ npm run dev
 - Send and receive images via **Cloudinary**
 - User authentication & authorization using **JWT**
 - Responsive UI with **Tailwind CSS** & **DaisyUI**
+- **State management** with **Zustand**
+- **HTTP requests** with **Axios**
 
 ## 🎯 Future Improvements
 
@@ -117,4 +127,3 @@ This project is for learning purposes. Feel free to modify and expand upon it!
 ---
 
 Happy coding! 🚀
-
