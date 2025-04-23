@@ -2,6 +2,19 @@
 
 A simple real-time chat application with photo upload functionality using Cloudinary. This project was built for learning **Socket.io** and includes both frontend and backend implementations.
 
+---
+
+## 📌 Features
+
+- Real-time chat using **Socket.io**
+- Send and receive images via **Cloudinary**
+- User authentication & authorization using **JWT**
+- Responsive UI with **Tailwind CSS** & **DaisyUI**
+- **State management** with **Zustand**
+- **HTTP requests** with **Axios**
+
+---
+
 ## ✨ Technologies Used
 
 ### Frontend:
@@ -143,16 +156,6 @@ http://localhost:5173
 
 ---
 
-## 📌 Features
-
-- Real-time chat using **Socket.io**
-- Send and receive images via **Cloudinary**
-- User authentication & authorization using **JWT**
-- Responsive UI with **Tailwind CSS** & **DaisyUI**
-- **State management** with **Zustand**
-- **HTTP requests** with **Axios**
-
----
 
 ## 🎯 Future Improvements
 
