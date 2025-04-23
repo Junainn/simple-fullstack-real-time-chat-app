@@ -1,9 +1,8 @@
-
 # Real-Time Chat App with Photo Upload
 
 A simple real-time chat application with photo upload functionality using Cloudinary. This project was built for learning **Socket.io** and includes both frontend and backend implementations.
 
-## 🚀 Technologies Used
+## ✨ Technologies Used
 
 ### Frontend:
 
@@ -22,39 +21,88 @@ A simple real-time chat application with photo upload functionality using Cloudi
 - **Cloudinary** (for image upload)
 - **JSON Web Token (JWT)** (for authentication and authorization)
 
-## 📂 Setup Instructions
+---
 
-### 1️⃣ Clone the Repository
+## 📦 Run with Docker
+
+You can run the entire application using Docker (frontend + backend + MongoDB).
+
+### 🐳 Docker Requirements
+
+- Docker
+- Docker Compose
+
+### ⚙️ Steps
+
+1. Clone the repository and go to the project root:
+
+   ```bash
+   git clone https://github.com/your-username/your-repo-name.git
+   cd your-repo-name
+   ```
+
+2. Copy the sample environment files and configure them:
+
+   ```bash
+   cp backend/.env.sample backend/.env
+   cp frontend/.env.sample frontend/.env
+   ```
+
+3. Update the `backend/.env` file:
+
+   - Replace the `MONGO_URI` with the MongoDB Docker URI provided in the sample:
+     ```env
+     MONGO_URI=mongodb://mongo:27017/chatapp
+     ```
+
+4. Run everything:
+
+   ```bash
+   docker-compose up --build -d
+   ```
+
+5. Visit the frontend:
+
+   ```
+   http://localhost:5173
+   ```
+
+6. Stop the containers:
+
+   ```bash
+   docker-compose down
+   ```
+
+---
+
+## 🔧 Manual Setup
+
+For development or if you prefer to run without Docker:
+
+### 1⃣ Clone the Repository
 
 ```sh
 git clone https://github.com/your-username/your-repo-name.git
 cd your-repo-name
 ```
 
-### 2️⃣ Configure Environment Variables
+### 2⃣ Configure Environment Variables
 
 #### Backend:
 
-Rename the environment files:
-
 ```sh
-mv .env.development.local.sample .env.development.local
-mv .env.production.local.sample .env.production.local
+mv backend/.env.sample backend/.env
 ```
-
-Then, update the `.env.development.local` and `.env.production.local` files with your **MongoDB**, **Cloudinary**, and other necessary configurations.
 
 #### Frontend:
 
-Rename the environment file:
-
 ```sh
-mv .env.sample .env
+mv frontend/.env.sample frontend/.env
 ```
 
-Update `.env` with the required credentials for your frontend configuration.
+Update `backend/.env` with your **MongoDB**, **Cloudinary**, and other necessary credentials.
 
-### 3️⃣ Install Dependencies
+### 3⃣ Install Dependencies
 
 #### Backend:
 
@@ -67,17 +115,11 @@ npm install
 
 ```sh
 cd frontend
-cd fr
 npm install
-```
-
-To install **Zustand** and **Axios**, run:
-
-```sh
 npm install zustand axios
 ```
 
-### 4️⃣ Start the Application
+### 4⃣ Start the Application
 
 #### Backend:
 
@@ -85,26 +127,19 @@ npm install zustand axios
 npm run dev
 ```
 
-> **Note:** If your backend entry file is inside the `src` folder, ensure your `package.json` scripts are correctly set up:
-
-> ```json
-> "scripts": {
->   "start": "node src/server.js",
->   "dev": "nodemon src/server.js"
-> }
-> ```
-
-> If `npm run dev` doesn't work, try running the backend manually:
-
-> ```sh
-> node src/server.js
-> ```
-
 #### Frontend:
 
 ```sh
 npm run dev
 ```
+
+Visit the frontend:
+
+```
+http://localhost:5173
+```
+
+---
 
 ## 📌 Features
 
@@ -115,11 +150,15 @@ npm run dev
 - **State management** with **Zustand**
 - **HTTP requests** with **Axios**
 
+---
+
 ## 🎯 Future Improvements
 
 - Message reactions
 - Typing indicators
 - Read receipts
+
+---
 
 ## 📝 License
 
@@ -128,3 +167,4 @@ This project is for learning purposes. Feel free to modify and expand upon it!
 ---
 
 Happy coding! 🚀
+
