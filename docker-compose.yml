@@ -1,0 +1,41 @@
+version : '3.8'
+
+services:
+  backend:
+    build: ./Backend
+    ports:
+      - "8080:8080"
+    env_file:
+      - ./backend/.env.development.local 
+    networks:
+      - chat-app
+    depends_on:
+      - mongo 
+  frontend:
+    build: ./Frontend/fr
+    ports:
+      - "5173:5173"
+    env_file:
+    - ./frontend/fr/.env
+    networks:
+      - chat-app
+    depends_on:
+      - backend
+
+
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./data:/data/db
+    networks:
+      - chat-app
+
+networks:
+  chat-app:
+    driver: bridge
+
+volumes:
+  data:
+

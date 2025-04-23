@@ -1,14 +1,14 @@
 import express from "express";
 import cookieParser from "cookie-parser";
-import {PORT}  from "./config/env.js"
-import connectDB from "./config/db.js";
-import authRoutes from "./routes/auth.routes.js"
-import messageRoutes from "./routes/message.routes.js"
-import { errorhandler } from "./middleware/error.middleware.js";
-import {server,io,app} from "./config/socket.js";
+import {PORT}  from "./src/config/env.js"
+import connectDB from "./src/config/db.js";
+import authRoutes from "./src/routes/auth.routes.js"
+import messageRoutes from "./src/routes/message.routes.js"
+import { errorhandler } from "./src/middleware/error.middleware.js";
+import {server,io,app} from "./src/config/socket.js";
 //import server from './src/config/socket.js';
 //import app from './src/config/socket.js';
-import { FR_URL } from "./config/env.js";
+import { FR_URL } from "./src/config/env.js";
 import cors from 'cors';
 
 app.use(express.json());
