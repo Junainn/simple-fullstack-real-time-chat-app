@@ -50,8 +50,8 @@ You can run the entire application using Docker (frontend + backend + MongoDB).
 1. Clone the repository and go to the project root:
 
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
-   cd your-repo-name
+   git clone https://github.com/junainn/simple-fullstack-real-time-chat-app.git
+   cd simple-fullstack-real-time-chat-app.git
    ```
 
 2. Rename the sample environment files and configure them:
@@ -96,8 +96,8 @@ For development or if you prefer to run without Docker:
 ### 1⃣ Clone the Repository
 
 ```sh
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/junainn/simple-fullstack-real-time-chat-app.git
+cd simple-fullstack-real-time-chat-app.git
 ```
 
 ### 2⃣ Configure Environment Variables
@@ -129,7 +129,7 @@ npm install
 #### Frontend:
 
 ```sh
-cd frontend
+cd frontend/fr
 npm install
 npm install zustand axios
 ```
